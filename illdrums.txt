@@ -1,0 +1,48 @@
+# Welcome to Sonic Pi v2.9
+in_thread do
+  live_loop :mainone do
+    sample :bd_fat
+    sample :bd_boom
+    sleep 0.25
+    sample :bd_fat
+    sample :bd_boom
+    sleep 0.25
+    sample :bd_fat
+    sample :bd_boom
+    sleep 0.5
+    sample :elec_mid_snare
+    sample :drum_snare_soft
+    sleep 0.5
+    sample :elec_mid_snare
+    sample :drum_snare_soft, rate: -1
+    sleep 1
+    sample :bd_fat
+    sample :bd_boom
+    sleep 0.5
+    sample :elec_mid_snare
+    sample :drum_snare_soft
+    sleep 0.5
+    sample :bd_fat
+    sample :bd_boom
+    sleep 0.5
+    sample :bd_fat
+    sample :bd_boom
+    sleep 0.5
+    sample :bd_fat
+    sample :bd_boom
+    sleep 0.5
+    sample :elec_mid_snare
+    sample :drum_snare_soft, rate: -1
+    sleep 1
+    sample :bd_fat
+    sample :bd_boom
+    sleep 0.5
+    sample :bd_fat
+    sample :bd_boom
+    sleep 0.5
+    sample :bd_fat
+    sample :bd_boom
+    sleep 1
+  end
+
+end
