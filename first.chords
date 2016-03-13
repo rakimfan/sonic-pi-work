@@ -1,0 +1,40 @@
+# Welcome to Sonic Pi v2.9
+use_bpm 85
+
+in_thread do
+  live_loop :beat do
+    sample :drum_bass_soft, amplitude: 2, sustain: 1, release: 0.5
+    sleep 0.5
+    sample :drum_bass_soft, sustain: 1, release: 0.5
+    sleep 0.5
+    sample :drum_snare_hard, sustain: 1, release: 1
+    sleep 0.75
+    sample :drum_bass_soft, sustain: 1, release: 0.5
+    sleep 0.25
+    sample :drum_bass_soft, sustain: 1, release: 0.5
+    sleep 0.5
+    sample :drum_bass_soft, sustain: 1, release: 0.5
+    sleep 0.5
+    sample :drum_snare_hard, sustain: 1, release: 1
+    sleep 1
+  end
+  loop do
+    use_synth :piano
+    play_chord chord(:d2, :minor)
+    sleep 0.5
+    play_chord chord(:a2, :major)
+    sleep 0.5
+    play_chord chord(:a2, :major)
+    sleep 1
+    play_chord chord(:f2, :minor)
+    sleep 1.5
+    play_chord chord(:g2, :minor)
+    sleep 1
+
+    play_chord chord(:d2, :minor)
+    sleep 0.5
+    play_chord chord(:a2, :major)
+    sleep 2
+
+  end
+end

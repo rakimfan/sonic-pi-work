@@ -1,0 +1,23 @@
+use_bpm 60
+with_fx :reverb do
+  live_loop :primarybasedrum do
+    sample :bd_boom, amp: 1
+    sample :bd_fat
+    sleep 4
+  end
+  live_loop :primarysnare do
+    sleep 1
+    sample :elec_hi_snare
+    sleep 1
+  end
+  live_loop :secondsnare do
+    sleep 1.5
+    sample :drum_snare_soft
+    sleep 1.5
+  end
+  live_loop :rnbhats do
+    sample :drum_cymbal_pedal, amp: 1, attack: 0.5, decay: 0.5, release: 0.1
+    sleep 0.5
+  end
+
+end

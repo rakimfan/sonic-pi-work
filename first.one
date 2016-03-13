@@ -1,0 +1,37 @@
+use_bpm 80
+with_fx :reverb do
+  live_loop :drum do
+    sample :bd_fat, release: 2
+    sample :drum_bass_soft
+    sleep 1
+    sample :sn_dolf
+    sleep 1
+    sample :bd_fat, release: 1
+    sample :drum_bass_soft
+    sleep 0.25
+    sample :bd_fat, release: 1
+    sample :drum_bass_soft
+    sleep 0.25
+    sample :bd_fat, release: 2
+    sample :drum_bass_soft
+    sleep 0.5
+    sample :sn_dolf
+    sleep 1
+  end
+  use_synth :fm
+  live_loop :rnbhats do
+    sample :drum_cymbal_pedal, amp: 1, attack: 0.5, decay: 0.5, release: 0.1
+    sleep 0.5
+  end
+end
+live_loop :melody do
+  use_synth :blade
+  play (chord :e, :sus4, num_octaves: 1).tick, release: 0.1
+  sleep 0.5
+  play (chord :e, :sus4, num_octaves: 2).tick, release: 0.1
+  sleep 1
+  play (chord :e, :sus4, num_octaves: 1).tick, release: 0.1
+  sleep 0.25
+  play (chord :e, :sus4, num_octaves: 2).tick, release: 0.1
+  sleep 0.75
+end
